@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+dubbo:
+  registry:
+    address: zookeeper://192.168.184.222:2181
+
+  application:
+    name: web-manager
+
+#首次启动不检查
+  consumer:
+    check: false
