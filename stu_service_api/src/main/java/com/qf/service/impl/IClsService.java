@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface IClsService {
     List<ClassesEntity> selClsList();
+
+    ClassesEntity queryById(Integer id);
 }

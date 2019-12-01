@@ -5,6 +5,8 @@
     <title>$Title$</title>
 </head>
 <body>
+<h1>分布式学生管理系统-学生列表</h1>
+<a href="/stu/addStu">添加学生</a>
 <form action="">
     <table>
         <tr>
@@ -18,8 +20,8 @@
             <td><a th:text="${u.id}"></a> </td>
             <td><a th:text="${u.sname}"></a></td>
             <td><a th:text="${u.age}"></a></td>
-            <td><a th:text="${u.cid}"></a></td>
-            <td></td>
+            <td><a th:text="${u.classes.cname}"></a></td>
+            <td> | <a th:href="|/stu/delStuById/${u.id}|">删除学生</a> | </td>
         </tr>
     </table>
 </form>

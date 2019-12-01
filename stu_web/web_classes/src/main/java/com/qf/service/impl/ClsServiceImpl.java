@@ -18,4 +18,16 @@ public class ClsServiceImpl implements IClsService {
         return clsDao.selectList(null);
     }
 
+    /**
+     * 通过ID查询班级信息
+     * @param id
+     * @return
+     */
+    @Override
+    public ClassesEntity queryById(Integer id) {
+        ClassesEntity classesEntity = clsDao.selectById(id);
+        return classesEntity;
+    }
+
+
 }

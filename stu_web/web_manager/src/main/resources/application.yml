@@ -11,3 +11,4 @@ dubbo:
 #首次启动不检查
   consumer:
     check: false
+    timeout: 30000
