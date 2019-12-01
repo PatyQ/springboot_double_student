@@ -8,4 +8,6 @@ public interface IClsService {
     List<ClassesEntity> selClsList();
 
     ClassesEntity queryById(Integer id);
+
+    Integer clsAddStudentNum(Integer cid);
 }

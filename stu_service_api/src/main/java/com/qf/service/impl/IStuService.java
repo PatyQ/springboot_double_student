@@ -8,4 +8,5 @@ public interface IStuService {
 
     List<Student> selList();
 
+    Integer addStudent(Student student);
 }

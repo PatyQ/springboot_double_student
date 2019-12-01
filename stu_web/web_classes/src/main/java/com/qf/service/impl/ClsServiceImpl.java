@@ -29,5 +29,26 @@ public class ClsServiceImpl implements IClsService {
         return classesEntity;
     }
 
+    /**
+     * 根据传入课程ID,增加相应的课程人数
+     * 先查询出人数,在根据当前人数+1
+     * @param cid
+     * @return
+     */
+    @Override
+    public Integer clsAddStudentNum(Integer cid) {
+        ClassesEntity classesEntity = clsDao.selectById(cid);
+
+        ClassesEntity entity = new ClassesEntity();
+        entity.setId(cid);
+        if (classesEntity.getCnum()!=null){
+            entity.setCnum(classesEntity.getCnum()+1);
+        }else {
+            entity.setCnum(1);
+        }
+        int i = clsDao.updateById(entity);
+        return i;
+    }
+
 
 }

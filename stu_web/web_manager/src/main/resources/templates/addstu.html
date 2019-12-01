@@ -6,5 +6,27 @@
 </head>
 <body>
 <h1>添加学生信息</h1>
+<form action="/stu/addStudent" method="post">
+    <table>
+        <tr>
+            <td>姓名</td>
+            <td>年龄</td>
+            <td>班级</td>
+            <td>操作</td>
+        </tr>
+        <tr>
+            <td><input type="text" name="sname"></td>
+            <td><input type="text" name="age"></td>
+            <td>
+                <select name="cid">
+                    <option value="1">动漫设计</option>
+                    <option value="2">软件工程</option>
+                    <option value="3">计算机科学与技术</option>
+                </select>
+            </td>
+            <td> | <input type="submit" value="确认添加"> | </td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>

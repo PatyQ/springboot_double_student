@@ -6,11 +6,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Accessors(chain = true)
-public class Student extends BaseEntity {
+public class Student extends BaseEntity implements Serializable {
     private String sname;
     private Integer age;
     private Integer cid;

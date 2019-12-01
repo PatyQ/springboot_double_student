@@ -29,4 +29,21 @@ public class StuServiceImpl implements IStuService {
         }
         return studentList;
     }
+
+    /**
+     * 根据传入的信息添加学生表和班级表
+     * @param student
+     * @return
+     */
+    @Override
+    public Integer addStudent(Student student) {
+        int insert = stuDao.insert(student);
+        Integer i = clsService.clsAddStudentNum(student.getCid());
+        //判断是否都大于0,成功
+        if (insert >0 && i>0){
+            return 1;
+        }else {
+            return -1;
+        }
+    }
 }

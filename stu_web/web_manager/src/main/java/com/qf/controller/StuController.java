@@ -28,6 +28,19 @@ public class StuController {
         return "addstu";
     }
 
+    /**
+     * 根据页面填写的信息添加学生
+     * @param student
+     * @return
+     */
+    @RequestMapping(value = "addStudent")
+    public String addStudent(Student student){
+        System.out.println(student);
+        Integer tf = stuService.addStudent(student);
+        return "redirect:/stu/sellist";
+    }
+
+
     @RequestMapping(value = "delStuById/{id}")
     public String delStuById(@PathVariable Integer id){
 
