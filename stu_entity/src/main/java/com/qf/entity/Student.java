@@ -16,5 +16,5 @@ public class Student extends BaseEntity {
     private Integer cid;
 
     @TableField(exist = false)
-    private Classes classes;
+    private ClassesEntity classes;
 }
