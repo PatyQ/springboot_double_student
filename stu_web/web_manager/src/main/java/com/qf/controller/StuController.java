@@ -2,7 +2,7 @@ package com.qf.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.qf.entity.Student;
-import com.qf.service.IStuService;
+import com.qf.service.impl.IStuService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;

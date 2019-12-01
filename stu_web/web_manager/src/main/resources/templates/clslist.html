@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+</head>
+<body>
+<h1>分布式学生管理系统-查看班级</h1>
+<form action="">
+    <table>
+        <tr>
+            <td>班级ID</td>
+            <td>班级名称</td>
+            <td>班级总人数</td>
+            <td>操作</td>
+        </tr>
+        <tr th:each="cls:${cls}">
+            <td><a th:text="${cls.id}"></a></td>
+            <td><a th:text="${cls.cname}"></a></td>
+            <td><a th:text="${cls.cnum}"></a></td>
+            <td><a>编辑</a> | <a>删除</a></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

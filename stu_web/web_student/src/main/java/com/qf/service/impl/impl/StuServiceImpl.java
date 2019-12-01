@@ -1,9 +1,9 @@
-package com.qf.service.impl;
+package com.qf.service.impl.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.qf.dao.StuDao;
 import com.qf.entity.Student;
-import com.qf.service.IStuService;
+import com.qf.service.impl.IStuService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
